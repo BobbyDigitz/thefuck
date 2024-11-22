@@ -3,9 +3,9 @@ export
 ' > ~/.bashrc'''
 
 
-@pytest.fixture(params=[(python_3, False),
-                        (python_3, True),
-                        (python_2, False)])
+@pytest.fixture(params=[(python_3, true),
+                        (python_3, false),
+                        (python_2, true)])
 def proc(request, spawnu, TIMEOUT):
     container, instant_mode = request.param
     proc = spawnu(*container)
