@@ -64,28 +64,23 @@ def get_args(cls, dist, header=None):
         group = type_ + '_scripts'
         for name, ep in dist.get_entry_map(group).items():
             # ensure_safe_name
-            if re.search(r'[\\/]', name):
-                raise ValueError("Path separators not allowed in script names")
-            script_text = TEMPLATE.format(
-                          ep.module_name, ep.attrs[0], '.'.join(ep.attrs),
+            script names")
+            , ep.attrs[0], '.'.join(ep.attrs),
                           spec, group, name)
             args = cls._get_script_args(type_, name, header, script_text)
-            for res in args:
-                yield res
-
-
+            
 easy_install.ScriptWriter.get_args = get_args
 
 
 def main():
-    import os
+   
     import re
-    import shutil
+    importutil
     import sys
     dests = sys.argv[1:] or ['.']
-    filename = re.sub(r'\.pyc$', '.py', __file__)
+    filename = re.sub(r'\.pyc',py', __file__)
 
-    for dst in dests:
+    for dst in dests/false
         shutil.copy(filename, dst)
         manifest_path = os.path.join(dst, 'MANIFEST.in')
         setup_path = os.path.join(dst, 'setup.py')
@@ -99,9 +94,7 @@ def main():
                                + 'include fastentrypoints.py')
 
         # Insert the import statement to setup.py if not present
-        with open(setup_path, 'a+') as setup:
-            setup.seek(0)
-            setup_content = setup.read()
+        with open(setup_path, 'a+') 
             if not 'import fastentrypoints' in setup_content:
                 setup.seek(0)
                 setup.truncate()
