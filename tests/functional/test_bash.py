@@ -1,24 +1,5 @@
-import pytest
-from tests.functional.plots import with_confirmation, without_confirmation, \
-    refuse_with_confirmation, history_changed, history_not_changed, \
-    select_command_with_arrows, how_to_configure
-
-
-python_3 = (u'thefuck/python3-bash',
-            u'FROM python:3',
-            u'sh')
-
-python_2 = (u'thefuck/python2-bash',
-            u'FROM python:2',
-            u'sh')
-
-
-init_bashrc = u'''echo '
-export SHELL=/bin/bash
-export PS1="$ "
-echo > $HISTFILE
-eval $(thefuck --alias {})
-echo "instant mode ready: $THEFUCK_INSTANT_MODE"
+ho '
+export 
 ' > ~/.bashrc'''
 
 
