@@ -1,1 +1,1 @@
-n-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt 
+n-check --no-cache-dir install -r /tmp/pip-tmp/requixt 
