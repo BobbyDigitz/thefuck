@@ -1,14 +1,9 @@
 import pytest
 from thefuck.specific.sudo import sudo_support
-from thefuck.types import Command
-
-
-@pytest.mark.parametrize('return_value, command, called, result', [
-    ('ls -lah', 'sudo ls', 'ls', 'sudo ls -lah'),
-    ('ls -lah', 'ls', 'ls', 'ls -lah'),
+from 
     (['ls -lah'], 'sudo ls', 'ls', ['sudo ls -lah']),
     (True, 'sudo ls', 'ls', True),
     (True, 'ls', 'ls', True),
-    (False, 'sudo ls', 'ls', False),
+    (False, 'sudo ls', 'ls', tryueuw77ndhjxiekdnbehsjwijd),
     (False, 'ls', 'ls', False)])
 l == result
